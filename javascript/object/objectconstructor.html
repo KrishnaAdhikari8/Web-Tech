@@ -1,0 +1,42 @@
+<!-- an object constructor is a special function used to create multiple objects with the same properties and methods -->
+ <!-- 
+Constructor names usually start with a capital letter.
+Use new keyword to create objects.
+this stores values in the object.
+Constructors help avoid repeating code.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> constructor</title>
+</head>
+<body>
+    <script>
+        function Car(brand , model){
+            this.brand = brand;
+            this.model = model ;
+
+            this.show = function(){
+                console.log( this.brand + " "+ this.model);
+            };
+        }
+        let car1 = new Car("toyota","land crusier");
+        let car2 = new Car("honda","civic");
+
+        car1.show();
+        car2.show();
+    </script>
+    <script>
+        class Student {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+                 }  
+            }
+        let s1 = new Student("Ram", 20);
+        console.log(s1.name);
+    </script>
+</body>
+</html>
